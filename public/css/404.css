@@ -1,0 +1,10 @@
+.page-not-found-main {
+  display: grid;
+  grid-template-rows: 1fr;
+  font-family: sans-serif;
+}
+
+.page-not-found-main__title {
+  color: green;
+  text-align: center;
+}
