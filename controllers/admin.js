@@ -24,31 +24,24 @@ const products = [
   }
 ];
 
-exports.getIndex = (req, res) => {
-  res.render("shop/index", {
-    pageTitle: "Home",
-    path: "/"
+exports.getAddProduct = (req, res) => {
+  res.render("admin/add-product", {
+    pageTitle: "Add Product",
+    path: "/admin/add-product",
+    url: req.baseUrl
   });
 };
 
-exports.getProductList = (req, res) => {
-  res.render("shop/product-list", {
+exports.postAddProduct = (req, res, next) => {
+  const product = new Product();
+  product.save(req.body);
+  res.redirect("/");
+};
+
+exports.getProducts = (req, res, next) => {
+  res.render("admin/add-product", {
     products,
-    pageTitle: "Product List",
-    path: "/product-list"
-  });
-};
-
-exports.getCart = (req, res) => {
-  res.render("shop/cart", {
-    path: "/cart",
-    pageTitle: "Your Cart"
-  });
-};
-
-exports.getCheckout = (req, res) => {
-  res.render("shop/checkout", {
-    path: "/checkout",
-    pageTitle: "Checkout"
+    pageTitle: "Admin Products",
+    path: "/admin/products"
   });
 };

@@ -1,0 +1,25 @@
+nav#mainNav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  a.navbar-brand(href='/shop') Node Shop
+  button.navbar-toggler.navbar-toggler-right(data-target='#navbarResponsive', data-toggle='collapse', type='button', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarResponsive.collapse.navbar-collapse
+    ul#exampleAccordion.navbar-nav.navbar-sidenav
+      li.nav-item(data-placement='right', data-toggle='tooltip', title='Shop')
+        a.nav-link(href='/shop')
+          i.fa.fa-fw.fa-dashboard
+          span.nav-link-text
+            | Shop
+      li.nav-item(data-placement='right', data-toggle='tooltip', title='Products')
+        a.nav-link(href='/shop/product-list')
+          i.fa.fa-fw.fa-dashboard
+          span.nav-link-text
+            | Product List
+      li.nav-item(data-placement='right', data-toggle='tooltip', title='Cart')
+        a.nav-link(href='/shop/cart')
+          i.fa.fa-fw.fa-dashboard
+          span.nav-link-text
+            | Cart
+      li.nav-item(data-placement='right', data-toggle='tooltip', title='Admin/Add Product')
+        a.nav-link(href='/admin/add-product')
+          span.nav-link-text
+            | Add Product
