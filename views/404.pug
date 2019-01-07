@@ -1,11 +1,16 @@
-extends layouts/main-layout.pug
+extends layouts/main.pug
 
 block head
-  title #{title}
+  title #{pageTitle}
+
+block append styles
+  link(rel="stylesheet", href="/css/404.css")
 
 block navbar
 
 block content
-  div.jumbotron.jumbotron-fluid
-    div.container.mx-auto
-      h4 Page not found
+  .wrapper
+   .wrapper__pageTitle
+    | #{pageTitle}
+    br
+    a.wrapper__shopLink(href='/shop', tabindex='-1', role='button', aria-disabled='true') Return to shop

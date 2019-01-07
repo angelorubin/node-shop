@@ -1,10 +1,25 @@
-.page-not-found-main {
+.wrapper{
   display: grid;
-  grid-template-rows: 1fr;
-  font-family: sans-serif;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
+    ". a a ."
+    ". a a ."
+    ". a a .";
+  background-color: palevioletred;
+  color: white;
+  height: 100vh;
+  font-size: 2rem;
+  text-align: center;
 }
 
-.page-not-found-main__title {
-  color: green;
+.wrapper__pageTitle {
+  grid-area: a;
+  align-self: center;
+  justify-self: center;
+}
+
+.wrapper__shopLink{
+  font-size: 1rem;
+  color: white;
   text-align: center;
 }
